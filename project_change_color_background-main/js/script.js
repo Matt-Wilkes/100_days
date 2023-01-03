@@ -1,18 +1,12 @@
-// I want to use an event listener to listen for clicks 
-// when button is clicked, background will change colour
-// need to change dom background colour
+// Use an event listener to listen for clicks 
+// when button is clicked, the document.body.style.backgroundColor will change to one of the colours in the 'colour' array
 var mainButton=document.querySelectorAll(".btn");
-let colour = "yellow"
+let colour = ["yellow","green","blue","orange","purple"]
 
 
 for (var i=0; i<mainButton.length; i++) {
     mainButton[i].addEventListener("click", function () {
-      console.log("I got clicked!");
-      document.body.style.backgroundColor = colour
+      var randNumber = Math.floor(Math.random()*(colour.length));
+      document.body.style.backgroundColor = colour[randNumber]
     });
   }
-
-// function respondToClick() {
-//     console.log ("I got clicked");
-  
-//   }
