@@ -7,6 +7,7 @@ function hexFunction() {
     for (var i=0; i<3; i++) {
         colours.push(Math.floor(Math.random()*256).toString(16));  
     };
+    console.log(colours)
     return ("#"+colours.join(""))
 }
 
